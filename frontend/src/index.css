@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  @apply bg-slate-50 text-slate-900;
+}
+.dark body { @apply bg-slate-950 text-slate-100; }
+
+.scrollbar-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded;
+}
+.dark .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-slate-700; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+
+/* Surfaces — used everywhere so theme switches in one place */
+.surface { @apply bg-white border-slate-200; }
+.dark .surface { @apply bg-slate-900/60 border-slate-800; }
+
+.surface-2 { @apply bg-slate-100 border-slate-200; }
+.dark .surface-2 { @apply bg-slate-900/40 border-slate-800; }
+
+.muted { @apply text-slate-500; }
+.dark .muted { @apply text-slate-400; }
+
+.input {
+  @apply bg-white border-slate-300 text-slate-900 rounded-lg px-3 py-2 text-sm border focus:outline-none focus:border-indigo-500;
+}
+.dark .input { @apply bg-slate-950 border-slate-700 text-slate-100; }
